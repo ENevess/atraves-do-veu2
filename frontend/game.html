@@ -6,18 +6,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <audio id="ambiente" autoplay loop>
+        <source src="audio.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+
     <div id="container">
         <h1>Através do Véu</h1>
-        <div id="dialogo" class="box">Você despertou. O Véu observa. Inicie sua jornada digitando algo abaixo.</div>
+        <div id="dialogo" class="box">
+            Você desperta.<br><br>
+            O mundo ao seu redor é estranho — formas e sons parecem distorcidos, como ecos de uma realidade que não é mais sua.<br><br>
+            Uma presença invisível sussurra, como se estivesse em toda parte. Ela não tem rosto, mas você sente que ela vê você.<br><br>
+            Você não lembra como chegou aqui.<br><br>
+            Mas algo — ou alguém — sabe.<br><br>
+            Uma figura se revela no nevoeiro. Ela não fala com palavras, mas com pensamentos. Um Oráculo.<br><br>
+            Sua missão? Descobrir quem você é, por que está aqui...<br><br>
+            E como voltar para casa.<br><br>
+            Mas atenção: nem toda pergunta terá resposta. Nem toda resposta será o que espera.<br><br>
+            Respire fundo.<br><br>
+            Através do Véu... a jornada começa agora.
+        </div>
 
         <textarea id="entrada" placeholder="Digite sua mensagem..." rows="3"></textarea>
         <div id="botoes">
             <button onclick="enviarMensagem()">Enviar</button>
-            <button onclick="limparDialogo()">Limpar</button>
         </div>
 
         <div id="historico">
-            <h2>Histórico</h2>
+            <h2>Interações</h2>
             <ul id="lista-historico"></ul>
         </div>
     </div>
