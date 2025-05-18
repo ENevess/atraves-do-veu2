@@ -8,10 +8,20 @@
 <body>
     <div id="container">
         <h1>Através do Véu</h1>
-        <div id="dialogo" class="box">Bem-vindo. O Véu aguarda sua pergunta...</div>
+        <div id="dialogo" class="box">Você despertou. O Véu observa. Inicie sua jornada digitando algo abaixo.</div>
+
         <textarea id="entrada" placeholder="Digite sua mensagem..." rows="3"></textarea>
-        <button onclick="enviarMensagem()">Enviar</button>
+        <div id="botoes">
+            <button onclick="enviarMensagem()">Enviar</button>
+            <button onclick="limparDialogo()">Limpar</button>
+        </div>
+
+        <div id="historico">
+            <h2>Histórico</h2>
+            <ul id="lista-historico"></ul>
+        </div>
     </div>
+
     <script src="oraculo.js"></script>
 </body>
 </html>
