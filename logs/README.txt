@@ -1,0 +1,1 @@
+Esta pasta armazenará logs de sessões.
