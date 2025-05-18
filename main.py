@@ -1,10 +1,22 @@
 from fastapi import FastAPI, Request
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from oraculo.resposta_generator import gerar_resposta
 from utils.filtro_seguro import verificar_conteudo_proibido
 from utils.logger import registrar_interacao
 from universos import universo_1, universo_2, universo_3, universo_4, universo_5
 
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 app = FastAPI()
+
+app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
+
+@app.get("/")
+def root():
+    return FileResponse("frontend/game.html")
 
 progresso_jogador = {
     "universo_atual": 1,
