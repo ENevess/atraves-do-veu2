@@ -48,8 +48,8 @@ async def interagir(request: Request):
         }
 
     universo = universos[progresso_jogador["universo_atual"]]
-    resposta_gpt = gerar_resposta(entrada)
-    resposta, tipo, avancar = universo.processar_interacao(resposta_gpt, progresso_jogador)
+    tipo, avancar = universo.processar_interacao(entrada, progresso_jogador)
+    resposta = gerar_resposta(entrada)
 
     progresso_jogador["interacoes"].append({
         "entrada": entrada,
